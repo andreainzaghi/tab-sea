@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="total" id="app">
+       
+            <div class="tab" style="position:fixed;">
+                <button class="tablinks" onclick="openCity(event, 'interni')" id="defaultOpen">Interni</button>
+                <button class="tablinks" onclick="openCity(event, 'esterni')">Esterni</button>
+                <button class="tablinks" onclick="openCity(event, 'roseto')">Roseto degli Abruzzi</button>
+                <button class="tablinks" onclick="openCity(event, 'maps')" id="defaultOpen">Maps</button>
+                <button class="tablinks" onclick="openCity(event, 'contatti')">Contatti</button>
+                <button class="tablinks" onclick="openCity(event, 'disponibilita')">Disponibilita'</button>
+            </div>
+            
+            <div id="interni" class="tabcontent" >
+                <div class="container" style="">
+                    <div>
+                        <img src="img/est1.jpeg" alt="" style="width:49%;">
+                        <img src="img/est2.jpeg" alt="" style="width:49%;">
+                        <img src="img/est3.jpeg" alt="" style="width:49%;">
+                        <img src="img/est4.jpeg" alt="" style="width:49%;">
+                        <img src="img/est5.jpeg" alt="" style="width:49%;">
+                        <img src="img/est6.jpeg" alt="" style="width:49%;">
+                        <img src="img/est7.jpeg" alt="" style="width:49%;">
+                        <img src="img/est8.jpeg" alt="" style="width:49%;">
+                        <img src="img/est9.jpeg" alt="" style="width:49%;">
+                        <img src="img/est10.jpeg" alt="" style="width:49%;">
+                        <img src="img/est11.jpeg" alt="" style="width:49%;">
+                        <img src="img/est12.jpeg" alt="" style="width:49%;">
+                        <img src="img/est13.jpeg" alt="" style="width:49%;">
+                    </div>
+                </div>
+            </div>
+            
+            <div id="esterni" class="tabcontent" style="">
+                <img src="img/img2/WhatsApp Image 2022-02-14 at 13.44.40.jpeg" alt="" style="width:49%;">
+                <img src="img/img2/WhatsApp Image 2022-02-14 at 13.45.03.jpeg" alt="" style="width:49%;">
+
+                <img src="img/img2/WhatsApp Image 2022-02-14 at 13.45.04 (1).jpeg" alt="" style="width:49%;">
+                <img src="img/img2/WhatsApp Image 2022-02-14 at 13.45.04.jpeg" alt="" style="width:49%;">
+                <img src="img/img2/WhatsApp Image 2022-02-14 at 13.45.05.jpeg" alt="" style="width:49%;">
+                <img src="img/img2/WhatsApp Image 2022-02-14 at 13.45.06.jpeg" alt="" style="width:49%;">
+                <img src="img/img2/WhatsApp Image 2022-02-14 at 13.45.07 (1).jpeg" alt="" style="width:49%;">
+                <img src="img/img2/WhatsApp Image 2022-02-14 at 13.45.07.jpeg" alt="" style="width:49%;">
+                <img src="img/img2/WhatsApp Image 2022-02-14 at 13.45.08 (1).jpeg" alt="" style="width:49%;">
+                <img src="img/img2/WhatsApp Image 2022-02-14 at 13.45.08.jpeg" alt="" style="width:49%;">
+                <img src="img/img2/WhatsApp Image 2022-02-14 at 13.45.09.jpeg" alt="" style="width:49%;">
+                <img src="img/img2/WhatsApp Image 2022-02-14 at 13.45.10 (1).jpeg" alt="" style="width:49%;">
+                <img src="img/img2/WhatsApp Image 2022-02-14 at 13.45.11.jpeg" alt="" style="width:49%;">
+                <img src="img/img2/WhatsApp Image 2022-02-14 at 13.45.10.jpeg" alt="" style="width:49%;">
+                <img src="img/img2/WhatsApp Image 2022-02-14 at 13.45.12 (1).jpeg" alt="" style="width:49%;">
+                <img src="img/img2/WhatsApp Image 2022-02-14 at 13.45.12.jpeg" alt="" style="width:49%;">
+                <img src="img/img2/WhatsApp Image 2022-02-14 at 13.45.13.jpeg" alt="" style="width:49%;">
+                <img src="img/img2/WhatsApp Image 2022-02-14 at 13.45.14 (1).jpeg" alt="" style="width:49%;">
+                <img src="img/img2/WhatsApp Image 2022-02-14 at 13.45.14.jpeg" alt="" style="width:49%;">
+            </div>
+            
+            <div id="roseto" class="tabcontent" style="">
+                <h3>Tokyo</h3>
+                <p>Tokyo is the capital of Japan.</p>
+            </div>
+            <div id="maps" class="tabcontent" style="">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2932.4673244209007!2d14.002194915755704!3d42.69382462195024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133195b47723a913%3A0xd632abb971073fe1!2sViale%20Makarska%2C%2024%2C%2064026%20Roseto%20degli%20Abruzzi%20TE!5e0!3m2!1sen!2sit!4v1641484511871!5m2!1sen!2sit"  style="border:0;width:100%;margin-left:0%;height:100vh;" allowfullscreen="" loading="lazy"></iframe>
+          
+            </div>
+            
+            <div id="contatti" class="tabcontent" style="">
+                <h3>Paris</h3>
+                <p>Paris is the capital of France.</p> 
+            </div>
+            
+            <div id="disponibilita" class="tabcontent" class="ab">
+                <div v-for="(i, index) in x" :key="i.id" class="abc">
+                    {{i.checkin}}
+                    {{i.checkout}}
+                    {{i.tariffa}}
+                    {{i.quattro}}
+                </div>
+            </div>
+  
+      
+    </div>
+    <script src="script.js"></script>
+    <script>
+        
+        function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+  
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+
+
+ 
+     
+    </script>
+</body>
+</html>
