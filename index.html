@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
-<body style="background-color: bisque;">
+<body style="">
     <div class="total" id="app" >
        
             <div class="tab" style="position:fixed;">
@@ -24,6 +24,9 @@
             <div id="interni" class="tabcontent" >
                 <div class="container" style="">
                     <div>
+                        <div style="position:relative;top:20px;left:50px;">
+                            <p>Esterni</p>
+                        </div>
                         <img src="img/est1.jpeg" alt="" style="width:49.5%;">
                         <img src="img/est2.jpeg" alt="" style="width:49.5%;">
                         <img src="img/est3.jpeg" alt="" style="width:49.5%;">
@@ -44,6 +47,9 @@
          <div id="esterni" class="tabcontent" style="">
            <div class="container" style="">
               <div>
+                <div style="position:relative;top:20px;left:50px;">
+                    <p>Interni</p>
+                </div>
                 <img src="img/img2/WhatsApp Image 2022-02-14 at 13.44.40.jpeg" alt="" style="width:49.5%;">
                 <img src="img/img2/WhatsApp Image 2022-02-14 at 13.45.03.jpeg" alt="" style="width:49.5%;">
                 <img src="img/img2/WhatsApp Image 2022-02-14 at 13.45.04 (1).jpeg" alt="" style="width:49.5%;">
@@ -71,22 +77,48 @@
                 <h3>Tokyo</h3>
                 <p>Tokyo is the capital of Japan.</p>
             </div>
-            <div id="maps" class="tabcontent" style="">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2932.4673244209007!2d14.002194915755704!3d42.69382462195024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133195b47723a913%3A0xd632abb971073fe1!2sViale%20Makarska%2C%2024%2C%2064026%20Roseto%20degli%20Abruzzi%20TE!5e0!3m2!1sen!2sit!4v1641484511871!5m2!1sen!2sit"  style="border:0;width:100%;margin-left:0%;height:80vh;" allowfullscreen="" loading="lazy"></iframe>
+            <div id="maps" class="tabcontent" style="margin-top:50px;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2932.4673244209007!2d14.002194915755704!3d42.69382462195024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133195b47723a913%3A0xd632abb971073fe1!2sViale%20Makarska%2C%2024%2C%2064026%20Roseto%20degli%20Abruzzi%20TE!5e0!3m2!1sen!2sit!4v1641484511871!5m2!1sen!2sit"  style="border:0;width:100%;margin-left:0%;height:80vh; " allowfullscreen="" loading="lazy"></iframe>
           
             </div>
             
             <div id="contatti" class="tabcontent" style="">
-                <h3>Paris</h3>
-                <p>Paris is the capital of France.</p> 
-            </div>
-            
-            <div id="disponibilita" class="tabcontent" class="ab">
-                <div v-for="(i, index) in x" :key="i.id" class="abc">
+                <div class="mer">
+                    <img src="img/Background - 2022-02-15T205720.148.png" alt="" style="width:20%;">
+                    <img src="img/Background - 2022-02-15T205722.722.png" alt="" style="width:20%;">
+                    <img src="img/Background - 2022-02-15T205724.026.png" alt="" style="width:20%;"> 
+                    <img src="img/Background - 2022-02-15T205725.729.png" alt="" style="width:20%;">
+                    <img src="img/tiktok.png" alt="" style="width:20%;">
+                    <img src="img/air.png" style="width:20%;">
+                </div>
+                 <div   >
+                <div v-for="(i, index) in x" :key="i.id" class="abc" class="tablinks" onclick="openCity(event, 'contatti')">
                    Checkin : {{i.checkin}} <br>
                    Checkout : {{i.checkout}} <br>
                    Tariffa : {{i.tariffa}} <br>
-                    {{i.quattro}}
+                   <span v-if="i.quattro == 'Disponibile'"  style="color:rgb(36, 189, 36);">
+                    <i class="fas fa-bullseye" style="font-size:18px;font-weight: bold;"> {{i.quattro}}</i>
+                 </span>
+                 <span v-else  style="color:red;">
+                     <i class="fas fa-times-circle" style="font-size:18px;font-weight: bold;"> {{i.quattro}}</i>
+                 </span>
+                    
+                </div>
+            </div>
+            </div>
+            
+            <div id="disponibilita" class="tabcontent" class="ab">
+                <div v-for="(i, index) in x" :key="i.id" class="abc" class="tablinks" onclick="openCity(event, 'contatti')">
+                   Checkin : {{i.checkin}} <br>
+                   Checkout : {{i.checkout}} <br>
+                   Tariffa : {{i.tariffa}} <br>
+                   <span v-if="i.quattro == 'Disponibile'"  style="color:rgb(36, 189, 36);">
+                    <i class="fas fa-bullseye" style="font-size:18px;font-weight: bold;"> {{i.quattro}}</i>
+                 </span>
+                 <span v-else  style="color:red;">
+                     <i class="fas fa-times-circle" style="font-size:18px;font-weight: bold;"> {{i.quattro}}</i>
+                 </span>
+                    
                 </div>
             </div>
   
